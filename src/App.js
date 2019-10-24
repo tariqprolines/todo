@@ -7,7 +7,7 @@ class App extends React.Component{
     this.state={
       items:[],
       text:'',
-      id:''
+      
     }
     this.handleChange=this.handleChange.bind(this);
     this.handleSubmit=this.handleSubmit.bind(this);
