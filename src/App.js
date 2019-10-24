@@ -7,11 +7,11 @@ class App extends React.Component{
     this.state={
       items:[],
       text:'',
-      id:''
+      id:'',
+      isToggleOn:false
     }
     this.handleChange=this.handleChange.bind(this);
     this.handleSubmit=this.handleSubmit.bind(this);
-    this.handletoggle=this.handletoggle.bind(this);
     this.handleDelete=this.handleDelete.bind(this);
 
   }
@@ -36,9 +36,6 @@ this.setState({
 }); 
 }
 
-handletoggle(){
-
-}
 
 handleDelete(id){
 const filteredItems = this.state.items.filter(item => {
@@ -50,6 +47,7 @@ const filteredItems = this.state.items.filter(item => {
 }
 
 render(){
+ 
   return(<div className="content-pot">
           <h3 className="text-center">Prolines Todo List</h3>
           <form className="form-inline" onSubmit={this.handleSubmit}>
@@ -63,7 +61,7 @@ render(){
          <ul>
          {this.state.items.map(item => (
               <li key={item.id}>
-          <input className="form-check-input" type="checkbox" value={item.id} onClick={this.handletoggle}/>
+          <input className="form-check-input" type="checkbox" value={item.id}/>
           <label className="form-check-label" htmlFor="defaultCheck1">
             {item.text}
           </label> 

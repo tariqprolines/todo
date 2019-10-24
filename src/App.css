@@ -24,3 +24,7 @@ border-radius: 5px;
 .Result > .form-check > ul > li{
 height:50px;  
 }
+
+input[type=checkbox]:checked + label{
+  text-decoration: line-through;
+}
